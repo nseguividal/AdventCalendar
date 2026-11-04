@@ -63,5 +63,8 @@ yarn-error.log*
 *.swp
 *.swo
 
+# Notes personals / fitxers interns
+TODO.md
+
 # Vercel
 .vercel
