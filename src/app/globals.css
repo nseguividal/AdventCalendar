@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-christmas-red: #C41E3A;
+  --color-christmas-red-dark: #8B1A1A;
+  --color-christmas-green: #2D6A4F;
+  --color-christmas-green-dark: #1B4332;
+  --color-christmas-gold: #D4A843;
+  --color-christmas-gold-light: #FFD700;
+  --color-christmas-snow: #F0F4F8;
+  --color-christmas-cream: #FFF8E7;
+
+  --font-family-display: 'Mountains of Christmas', cursive, serif;
+  --font-family-body: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(212, 168, 67, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(212, 168, 67, 0.9), 0 0 40px rgba(212, 168, 67, 0.4); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes snowfall-fall {
+  0% {
+    transform: translate3d(0, -50px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(24px, 55vh, 0) rotate(180deg);
+  }
+  100% {
+    transform: translate3d(-20px, 110vh, 0) rotate(360deg);
+  }
+}
+
+.snowflake-flake {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  user-select: none;
+  animation-name: snowfall-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes snowfall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(360deg); opacity: 0.3; }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@utility animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@utility animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@utility animate-snowfall {
+  animation: snowfall linear infinite;
+}
+
+body {
+  background-color: #faf6f2;
+  color: #2b2b2b;
+  min-height: 100vh;
+}

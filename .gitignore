@@ -1,0 +1,67 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Testing & Coverage
+/coverage
+
+# Next.js build & caches
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables & secrets (MÀXIMA SEGURETAT: MAI PUJAR CLAUS A GITHUB)
+.env
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.local
+
+# Permetre únicament la plantilla d'exemple sense claus
+!.env.example
+
+# Credentials & security keys
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_ecdsa
+id_ed25519
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE & editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Vercel
+.vercel
