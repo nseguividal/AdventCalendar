@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎄 Calendari d'Advent 2026
 
-## Getting Started
+Un calendari d'advent interactiu per compartir amb la familia i amics. Completament customizable, fet amb  **Next.js** i **Supabase**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Començament
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Set up environment variables:**
+   Copy `.env.example` to `.env.local` and add your Supabase credentials:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the local development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎮 Minijocs inclosos al calendari de 2026
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📜 Endevinalla 
+- 🔍 Sopa de lletres 
+- ❓ Pregunta familiar
+- 👶 Endevina el nadó 
+- 🃏 Joc de memòria 
+- 🟩 Wordle de Nadal
+- ☃️ El ninot de neu 
+- 🔤 Lletres desordenades 
+- 🔢 Equació nadalenca 
+- 🔮 Barreja de boles 
+- 🎁 Atrapa els regals 
+- 💩 On és el Caganer? 
+- 🔔 Campanes de Nadal 
+- 🪵 Pica el Tió 
+- 🧩 Mini Sudoku nadalenc 
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧭 ON ANAR?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Pàgina del Calendari (Jugadors):**  
+  `http://localhost:3000/app/[calendar_slug]`  
+  Obra les 24 portes del calendari, juga els minijocs diaris i revela el secret que amaga el puzzle final.
+
+- **Panell d'Admin:**  
+  `http://localhost:3000/admin`  
+  Per crear i administrar els calendaris, configura els 24 dies amb els jocs que vulguis per cada dia.
+
+> **🔑 Accés Admin:**  
+> Per entrar al panell de `/admin`, primer has de crear l'usuari de l'administrador dins del **Supabase project**:  
+> Ves a **Supabase Dashboard > Authentication > Users > Add user** (enter an email and password).Utilitza aquestes credencials per entrar a `/admin`.
